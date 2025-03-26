@@ -1,0 +1,954 @@
+*{
+  margin:0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth; 
+}
+.nav {
+  background-image: url('imagens/img11.jpg');
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centraliza os itens verticalmente */
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  padding: 0 20px;
+}
+
+
+/* Botão "Solicite um Orçamento" */
+.left-menu {
+  position: absolute;
+  left: 20px; /* Alinha o botão à esquerda */
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Menu central */
+.nav-list {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  list-style: none; /* Remove marcadores */
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Faz o menu ocupar o espaço central */
+}
+
+.nav-list li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.nav-list a:hover {
+  color: #ffffff; /* Cor ao passar o mouse */
+}
+
+/* Logo e nome da empresa */
+.logo-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px; /* Alinha a logo à direita */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 100%; /* Torna a logo redonda */
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+/* FIM HEADER */
+
+/* Estilização da Seção de Apresentação */
+.apresentacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: url('imagens/img21.jpg') no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Efeito de fundo escuro para melhor contraste */
+.apresentacao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+}
+
+/* Caixa de Texto - Removido o fundo branco */
+.apresentacao-container {
+  position: relative;
+  padding: 30px;
+  max-width: 800px;
+}
+
+/* Título - Cor mais vibrante */
+.apresentacao-container h1 {
+  font-size: 32px;
+  color: #ffffff; /* Texto branco */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Efeito de destaque */
+  margin-bottom: 15px;
+}
+
+/* Parágrafos - Maior contraste */
+.apresentacao-container p {
+  font-size: 21px;
+  color: #f0f0f0; /* Texto branco mais suave */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão de Chamada para Ação */
+.cta-button {
+  display: inline-block;
+  background-color: #2e74c4;
+  color: white;
+  padding: 12px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button:hover {
+  background-color: #005b96;
+  transform: scale(1.05);
+}
+
+
+/*inicio serviços*/
+.services {
+  width: 100%;
+  height: 80px 0;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to bottom, #f9fafa, #c3d7ee);
+}
+
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid dos serviços */
+.service-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Cada item de serviço */
+.service-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Botão */
+.btn-solicitar {
+  background-color: #007BFF;
+  color: #fff;
+padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-solicitar:hover {
+  background-color: #072341;
+}
+
+
+/* FIM SERVIÇOS */
+
+/* Cada passo */
+
+.step img {
+  max-width: 100%;
+  height: 150%;
+  margin-top: 30px;
+}
+
+.step h3 {
+  font-size: 25px;
+  color:black;
+  margin-bottom: 30px;
+}
+
+.step p {
+  font-size: 18px;
+  color:black;
+  line-height: 1.6;
+}
+
+/* FIM DA ESTILIZAÇÃO DA SEÇÃO */
+/*inicio marcas*/
+.marcas-section {
+  background: linear-gradient(to bottom, #f9fafa, #2e74c4);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.marcas-section h2 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.marcas-section p {
+  font-size: 18px;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.marcas-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.marcas-section {
+  background: linear-gradient(to bottom, #f9fafa, #2e74c4);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.marcas-section h2 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.marcas-section p {
+  font-size: 18px;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.marcas-imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de Serviços */
+.servicos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('imagens/img8.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Efeito de fundo escuro para melhorar a legibilidade */
+.servicos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+}
+
+/* Container principal */
+.servicos-container {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+.servicos-container h2 {
+  font-size: 28px;
+  color: #004c98;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Lista de serviços */
+.servicos-lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Estilização dos itens */
+.servico-item {
+  background: #2e74c4;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.servico-item:hover {
+  transform: scale(1.05);
+  background: #005b96;
+}
+
+/*inicio higienização*/
+/* Seção Higienização */
+.higienizacao-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #dde6f0, #b0c4de);
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 30px;
+}
+
+/* Conteúdo textual */
+.higienizacao-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.higienizacao-content h2 {
+  font-size: 26px;
+  color: #003366; /* Azul mais escuro para maior contraste */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase; /* Deixa o título mais destacado */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adiciona leve sombra */
+}
+
+.higienizacao-content p {
+  font-size: 22px; /* Tamanho maior para visibilidade */
+  font-weight: bold;
+  color: #222; /* Tom mais escuro para melhor leitura */
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem com efeito */
+.higienizacao-image {
+  flex: 1;
+  text-align: center;
+}
+
+.higienizacao-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+  filter: brightness(0.9) contrast(1.1); /* Melhora a qualidade da imagem */
+}
+
+.higienizacao-image img:hover {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.2);
+}
+
+/* Botão de Ação */
+.call-to-action {
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(45deg, #005b96, #003366);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.call-to-action:hover {
+  background: linear-gradient(45deg, #003366, #005b96);
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.instalacao-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #f0f0f0, #d9e3f1);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.instalacao-content {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.instalacao-content h2 {
+  font-size: 24px;
+  color: #2e74c4;
+  margin-bottom: 15px;
+}
+
+.instalacao-content p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.instalacao-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.instalacao-content ul li {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.call-to-action {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #061853;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.call-to-action:hover {
+  background-color: #005b96;
+  transform: scale(1.1);
+}
+
+.instalacao-image {
+  flex: 1;
+  text-align: center;
+}
+
+.instalacao-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos gerais da seção */
+.about {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#f9fafa, #2e74c4);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+/* Estilização da imagem */
+.about-image {
+  position: relative;
+  max-width: 400px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 5px solid #ffffff;
+}
+
+/* Estilização do texto */
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1c2431;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #004c98;
+  margin-top: 10px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+/* Botão flutuante do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button img {
+  width: 24px;
+  height: 24px;
+}
+/* INICIO RODAPE */
+/* Estilo geral do rodapé */
+.footer {
+  background: linear-gradient(#acb6b6, );
+  padding: 20px;
+  border-top: 2px solid #ddd;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Informações de contato */
+.footer-info {
+  text-align: left;
+  font-size: 22px;
+  color: #333;
+}
+
+.footer-info span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Logo */
+.footer-logo {
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-logo p {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #004c98;
+}
+.footer-payment {
+  text-align: center;
+}
+
+.footer-payment p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-payment img {
+  max-width: 240px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+}
+
+
+/* Botão do WhatsApp */
+.footer-whatsapp .whatsapp-button {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.footer-whatsapp .whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+/* Estilos responsivos para telas menores que 768px */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-list li {
+    margin: 5px 0;
+  }
+
+  .logo-container {
+    position: static;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+/* apresentação empresa  */
+/* Responsividade */
+@media (max-width: 600px) {
+  .apresentacao {
+      height: auto;
+      padding: 50px 20px;
+  }
+
+  .apresentacao-container {
+      max-width: 100%;
+  }
+
+  .apresentacao-container h1 {
+      font-size: 26px;
+  }
+
+  .apresentacao-container p {
+      font-size: 18px;
+  }
+
+  .cta-button {
+      font-size: 18px;
+      padding: 10px 20px;
+  }
+}
+/* apresentação empresa fim */
+ 
+  
+  /* Para telas muito pequenas (exemplo: smartphones menores) */
+  @media (max-width: 480px) {
+    .main {
+      padding: 15% 5%;
+    }
+  
+    .main h1 {
+      font-size: 20px;
+    }
+  
+    .main p {
+      font-size: 12px;
+    }
+  
+    .call-to-action {
+      font-size: 14px;
+      padding: 8px 18px;
+    }
+  }
+
+  .services {
+    padding: 20px;
+  }
+
+  .service-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-item {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .how-it-works {
+    padding: 30px;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-image {
+    max-width: 80%;
+  }
+
+  .about-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+  /* serviços oferecidos */
+@media (max-width: 600px) {
+  .servicos-lista {
+      grid-template-columns: 1fr;
+  }
+}
+  
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .higienizacao-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .higienizacao-content h2 {
+    font-size: 24px;
+  }
+
+  .higienizacao-content p {
+    font-size: 20px;
+  }
+
+  .higienizacao-image img {
+    max-width: 320px;
+  }
+}
+@media (max-width: 768px) {
+  .instalacao-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .instalacao-content {
+      text-align: center;
+  }
+
+  .instalacao-content ul {
+      text-align: left;
+      display: inline-block;
+  }
+}
+/* Para celulares */
+@media (max-width: 768px) {
+  .higienizacao-container {
+    padding: 20px;
+  }
+
+  .higienizacao-content h2 {
+    font-size: 24px;
+  }
+
+  .higienizacao-content p {
+    font-size: 20px;
+  }
+
+  .higienizacao-image img {
+    max-width: 280px;
+  }
+}
+
+/* Para telas muito pequenas (exemplo: celulares menores) */
+@media (max-width: 480px) {
+  .higienizacao-container {
+    padding: 15px;
+  }
+
+  .higienizacao-content h2 {
+    font-size: 18px;
+  }
+
+  .higienizacao-content p {
+    font-size: 12px;
+  }
+
+  .higienizacao-image img {
+    max-width: 250px;
+  }
+}
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-info {
+    font-size: 12px;
+  }
+
+  .footer-logo img {
+    width: 80px;
+  }
+
+  .whatsapp-button {
+    font-size: 14px;
+    padding: 10px;
+    gap: 5px;
+  }
+}
+
+/* Estilos específicos para telas menores que 480px */
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 20px;
+  }
+
+  .main p {
+    font-size: 12px;
+  }
+
+  .btn-orcamento {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .call-to-action {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .step img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .service-item h3 {
+    font-size: 18px;
+  }
+
+  .service-item p {
+    font-size: 12px;
+  }
+
+  .footer-info {
+    font-size: 10px;
+  }
+}
